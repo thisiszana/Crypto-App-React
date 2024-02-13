@@ -4,7 +4,7 @@ import styles from "./TableCoin.module.css";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 
-function TableCoin({ coin, isLoading }) {
+function TableCoin({ coin, isLoading, currency }) {
   return (
     <div className={styles.container}>
       {isLoading ? (
@@ -23,7 +23,7 @@ function TableCoin({ coin, isLoading }) {
           </thead>
           <tbody>
             {coin.map((coin) => (
-              <TableRow data={coin} key={coin.id} />
+              <TableRow data={coin} key={coin.id} currency={currency} />
             ))}
           </tbody>
         </table>
@@ -34,7 +34,7 @@ function TableCoin({ coin, isLoading }) {
 
 export default TableCoin;
 
-const TableRow = ({ data }) => {
+const TableRow = ({ data, currency }) => {
   const {
     image,
     name,
@@ -53,7 +53,15 @@ const TableRow = ({ data }) => {
         </div>
       </td>
       <td>{name}</td>
-      <td>$ {current_price.toLocaleString()}</td>
+      <td>
+        {currency === "usd"
+          ? `$  ${current_price.toLocaleString()}`
+          : currency === "jpy"
+          ? `¥  ${current_price.toLocaleString()}`
+          : currency === "eur"
+          ? `€  ${current_price.toLocaleString()}`
+          : null}
+      </td>
       <td className={change_price > 0 ? styles.success : styles.error}>
         {change_price.toFixed(2)}%
       </td>

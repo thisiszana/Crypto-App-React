@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCoinList } from "../../Services/cryptoApi";
 import TableCoin from "../Modules/TableCoin";
 import Pagination from "../Modules/Pagination";
+import Search from "../Modules/Search";
 
 function HomePgae() {
   const [coin, setCoin] = useState([]);
@@ -20,10 +21,11 @@ function HomePgae() {
     };
 
     getData();
-  }, [page]);
+  }, [page, currency]);
   return (
     <>
-      <TableCoin coin={coin} isLoading={isLoading} />
+      <Search currency={currency} setCurrency={setCurrency} />
+      <TableCoin coin={coin} isLoading={isLoading} currency={currency} />
       <Pagination page={page} setPage={setPage} />
     </>
   );

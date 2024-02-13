@@ -1,5 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
 body {
-  margin: 1000px;
-  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  background-color: #061222;
+  color: #fff;
+  max-width: 1200px;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
 }

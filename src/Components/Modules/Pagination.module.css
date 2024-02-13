@@ -1,0 +1,37 @@
+.pagination {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.pagination button {
+    all: unset;
+    width: 80px;
+    background-color: #6f0477;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pagination p {
+    display: inline-block;
+    border: 1px solid #6f0477;
+    width: 25px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: .8rem;
+}
+
+.disabled {
+    opacity: .3 !important;
+    cursor: no-drop !important;
+}
+
+.selected {
+    background-color: #6f0477;
+}

@@ -1,0 +1,107 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.chart {
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 200px;
+    background-color: #18181ce6;
+    border: 2px solid #404042;
+    border-radius: 20px;
+}
+
+.graph {
+    width: 760px;
+    height: 300px;
+}
+
+.nameCross {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 30px;
+}
+
+.nameCross .name {
+    display: flex;
+    align-items: center;
+}
+
+.nameCross .name img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.nameCross .name p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nameCross .cross span {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #6f0477;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.nameCross .cross span:hover {
+    transform: scale(1.1);
+}
+
+.types {
+    margin-top: 30px;
+}
+
+.types button {
+    margin: 10px 20px;
+    background-color: #18181cdb;
+    color: #6f0477;
+    border: 1px solid #6f0477;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.types button:hover {
+    transform: translateY(-.2rem);
+}
+
+.types .selected {
+    background-color: #6f0477;
+    color: #fff;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20px 0;
+}
+
+.details div {
+    display: flex;
+    font-size: 1.1rem;
+}
+
+.details p {
+    margin-right: 7px;
+    color: #6f0477;
+    font-weight: 700;
+}
